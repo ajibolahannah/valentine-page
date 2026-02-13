@@ -2,6 +2,7 @@ const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 const accept = document.getElementById('acc')
 const vall = document.querySelector(".valcard2")
+const val1 = document.querySelector(".valcard")
 
 let ye = "Yes🥰"
 let count = 0
@@ -65,6 +66,8 @@ yes.addEventListener('click', function(e){
         
     </div>
     `
+    // val1.classList.remove("active")
+    val1.style.display = "none"
 })
 
 
