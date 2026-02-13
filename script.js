@@ -62,13 +62,30 @@ yes.addEventListener('click', function(e){
     vall.innerHTML = `
     <div class="valcard2" id="acc">
         <img src="./images.jpg" alt="img" class="teddy2">
-        <h2>Yayyyyyy🥰😊😘<h2/>
-        
+        <h2>Yayyyyyy🥳🥰😊</h2>
+        <p>Happy Valentine 😘🤭</p>
+        <button class="reply" id="reply">Send Reply</button>
     </div>
     `
     // val1.classList.remove("active")
     val1.style.display = "none"
+
+    let reply = document.getElementById('reply')
+  const phone = "+2348022887821"; // replace with your number
+  const message = "Hey I just clicked YES on your page! ";
+
+  const whatsappLink =
+    `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+  window.open(whatsappLink, "_blank");
+  message.style.cursor = "pointer"
 })
+
+
+
+
+
+
 
 
 

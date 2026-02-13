@@ -73,11 +73,36 @@ button{
  height: fit-content;
  margin-top: 19px;
  margin: 10px;
- animation: jump 2s ease-in-out alternate infinite;
+ animation: bounce 1s ease-in-out alternate infinite;
  background: transparent;
 }
+@keyframes bounce {
+   0% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(0, -12px); /* up */
+  }
+
+  /* 40% {
+    transform: translate(10px, 0);
+  } */
+
+  60% {
+    transform: translate(0, 15px); /* down */
+  }
+
+  /* 80% {
+    transform: translate(-10px, 0); 
+  } */
+
+  100% {
+    transform: translate(0, 0); /* back to center */
+  }
+}
 .valcard2{
-    background-color: wheat;
+    background-color:rgb(246,232,219);
     background-repeat: no-repeat;
     width: 80%;
     height:fit-content;
@@ -87,4 +112,7 @@ button{
     align-items: center;
     border-radius: 20px;
     
+}
+.reply{
+  background-color: peachpuff;
 }
