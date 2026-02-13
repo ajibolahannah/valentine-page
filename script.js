@@ -1,24 +1,3 @@
-const generateBtn = document.getElementById('generateLink');
-
-generateBtn.addEventListener('click', () => {
-    const senderNumber = document.getElementById('senderNumber').value.trim();
-    if(!senderNumber){
-        alert("Enter your number with country code!");
-        return;
-    }
-
-    // Create a shareable link with the number as a query parameter
-    const pageUrl = window.location.origin + window.location.pathname;
-    const shareLink = `${pageUrl}?number=${encodeURIComponent(senderNumber)}`;
-
-    document.getElementById('linkOutput').innerText = `Share this link: ${shareLink}`;
-});
-
-
-
-
-
-
 
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
@@ -86,7 +65,9 @@ yes.addEventListener('click', function(e){
         <img src="./images.jpg" alt="img" class="teddy2">
         <h2>Yayyyyyy🥳🥰😊</h2>
         <p>Happy Valentine 😘🤭</p>
+        
         <button class="reply" id="reply">Send Reply</button>
+
     </div>
     `
     // val1.classList.remove("active")
