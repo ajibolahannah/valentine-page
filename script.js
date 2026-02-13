@@ -65,7 +65,7 @@ yes.addEventListener('click', function(e){
         <img src="./images.jpg" alt="img" class="teddy2">
         <h2>Yayyyyyy🥳🥰😊</h2>
         <p>Happy Valentine 😘🤭</p>
-        
+        <input type="text" id="number" placeholder="Enter My Whatsapp Number e.g+23490...">
         <button class="reply" id="reply">Send Reply</button>
 
     </div>
@@ -75,7 +75,7 @@ yes.addEventListener('click', function(e){
 
   reply.addEventListener('click', function(e){
  let reply = document.getElementById('reply')
-  const phone = "+2348022887821"; // replace with your number
+  const phone = document.getElementById("number").value;
   const message = "Hey I just clicked YES on your page! ";
 
   const whatsappLink =
