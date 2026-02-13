@@ -1,3 +1,25 @@
+const generateBtn = document.getElementById('generateLink');
+
+generateBtn.addEventListener('click', () => {
+    const senderNumber = document.getElementById('senderNumber').value.trim();
+    if(!senderNumber){
+        alert("Enter your number with country code!");
+        return;
+    }
+
+    // Create a shareable link with the number as a query parameter
+    const pageUrl = window.location.origin + window.location.pathname;
+    const shareLink = `${pageUrl}?number=${encodeURIComponent(senderNumber)}`;
+
+    document.getElementById('linkOutput').innerText = `Share this link: ${shareLink}`;
+});
+
+
+
+
+
+
+
 const yes = document.getElementById('yes');
 const no = document.getElementById('no');
 const accept = document.getElementById('acc')
@@ -70,7 +92,8 @@ yes.addEventListener('click', function(e){
     // val1.classList.remove("active")
     val1.style.display = "none"
 
-    let reply = document.getElementById('reply')
+  reply.addEventListener('click', function(e){
+ let reply = document.getElementById('reply')
   const phone = "+2348022887821"; // replace with your number
   const message = "Hey I just clicked YES on your page! ";
 
@@ -78,8 +101,11 @@ yes.addEventListener('click', function(e){
     `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
   window.open(whatsappLink, "_blank");
-  message.style.cursor = "pointer"
 })
+  
+})
+
+
 
 
 
